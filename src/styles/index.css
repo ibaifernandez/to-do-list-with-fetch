@@ -1,12 +1,38 @@
+body {
+    background: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkblue;
+    zoom:0.85;
+}
 
-/* 
+li {
+    border: 1px solid yellow;
+    display:flex;
+    align-items: center;
+    margin: 5px 0;
+    background: azure;
+    width: 300px;
+    list-style-type: none;
+    color: darkslategray;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.box {
+    width: 350px;
+}
 
-*/
+.task {
+    width: 350px;
+}
+
+input[type=text] {
+    width: 300px;
+}
+
+input:focus-visible {
+    outline:none;
+    border:none;
+}
+
+.delete {
+    font-size: 12px;
+}
