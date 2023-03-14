@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -13,19 +13,19 @@ import { ContextProvider } from "./context/ContextProvider.jsx";
 
 const App = () => {
     return (
-    <BrowserRouter>
-        <ContextProvider>
-            <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<Home />} />
-                    <Route path="/signup" element={<Signup />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/tasklist" element={<TaskList />} />
-                </Route>
-            </Routes>
-        </ContextProvider>
-    </BrowserRouter>
+        <BrowserRouter>
+            <ContextProvider value={ContextProvider}>
+                <Routes>
+                    <Route path="/" element={<Layout />}>
+                        <Route index element={<Home />} />
+                        <Route path="/signup" element={<Signup />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/tasklist" element={<TaskList />} />
+                    </Route>
+                </Routes>
+            </ContextProvider>
+        </BrowserRouter>
     );
-}
+};
 
 ReactDOM.render(<App />, document.querySelector("#app"));

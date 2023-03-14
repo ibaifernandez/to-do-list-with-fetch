@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import { Context } from "./ContextCreator.jsx";
 
 export const ContextProvider = ({ children }) => {
-    const [username, setUsername] = useState("Ibai");
-    console.log(username);
+    const [username, setUsername] = useState("");
 
     return (
-        <Context.Provider value={{username:username}}>
+        <Context.Provider
+            value={{ username: username, setUsername: setUsername }}
+        >
             {children}
         </Context.Provider>
     );
