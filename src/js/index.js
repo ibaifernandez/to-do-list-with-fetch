@@ -8,7 +8,7 @@ import { Layout } from "./Layout.jsx";
 import { Home } from "./pages/Home.jsx";
 import { Signup } from "./pages/Signup.jsx";
 import { Login } from "./pages/Login.jsx";
-import { TaskList } from "./pages/Tasklist.jsx";
+import Tasklist from "./pages/Tasklist.jsx";
 import { ContextProvider } from "./context/ContextProvider.jsx";
 
 const App = () => {
@@ -20,7 +20,7 @@ const App = () => {
                         <Route index element={<Home />} />
                         <Route path="/signup" element={<Signup />} />
                         <Route path="/login" element={<Login />} />
-                        <Route path="/tasklist" element={<TaskList />} />
+                        <Route path="/tasklist" element={<Tasklist />} />
                     </Route>
                 </Routes>
             </ContextProvider>
